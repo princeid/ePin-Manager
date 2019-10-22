@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      function myFunction() {
+        if (window.localStorage.getItem("email") != "") {
+          document.getElementById("sign-in").style.display = "none";
+        }
+        if (window.localStorage.getItem("email") == "") {
+          document.getElementById("signout").style.display = "none";
+        }
+      }
+    </script>
+    <script src="js/jquery-3.4.1.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>My MTN</title>
+  </head>
+  <body onload="myFunction()">
+    <nav class="navbar navbar-light bg-light nav-background">
+      <a class="navbar-brand" href="#">
+        <img src="img/logo.jpg" width="60" height="30" alt="" />
+      </a>
+      <ul class="navbar-nav mt-2 mt-lg-0 ml-auto">
+        <li class="nav-item">
+          <a id="epinmanager" class="nav-link links" href="index.html"
+            >ePin Manager</a
+          >
+        </li>
+      </ul>
+      <button
+        type="submit"
+        id="sign-in"
+        class="btn btn-outline-secondary btn-sm sign-in-btn login-out-btn"
+      >
+        Login
+      </button>
+      <button
+        type="submit"
+        id="signout"
+        class="btn btn-outline-secondary btn-sm sign-out-btn login-out-btn"
+      >
+        Logout
+      </button>
+    </nav>
+    <br />
+
+    <div id="content">
+      <div class="container">
+        <div class="row bar">
+          <div class="col-md-9">
+            <section>
+              <p class="lead">
+                This is a collection of the frequently asked questions
+                about the new MTN ePin Manager Application.
+              </p>
+              <div id="accordion" role="tablist">
+                <div class="card card-primary">
+                  <div id="headingOne" role="tab" class="card-header">
+                    <h5 class="mb-0 mt-0">
+                      <a
+                        data-toggle="collapse"
+                        href="#collapseOne"
+                        aria-expanded="true"
+                        aria-controls="collapseOne"
+                        >1. Who can use the MTN ePin Manager?</a
+                      >
+                    </h5>
+                  </div>
+                  <div
+                    id="collapseOne"
+                    role="tabpanel"
+                    aria-labelledby="headingOne"
+                    data-parent="#accordion"
+                    class="collapse show"
+                  >
+                    <div class="card-body">
+                      <p>
+                        The MTN epin Manager was built for MTN licensed
+                        recharge card dealers to enable them purchase recharge
+                        cards directly from MTN and sell to distributors.
+                      </p>
+                      <!-- <ul>
+                        <li>
+                          Lorem ipsum dolor sit amet, consectetuer adipiscing
+                          elit.
+                        </li>
+                        <li>Aliquam tincidunt mauris eu risus.</li>
+                        <li>Vestibulum auctor dapibus neque.</li>
+                      </ul> -->
+                    </div>
+                  </div>
+                </div>
+                <div class="card card-primary">
+                  <div id="headingOne" role="tab" class="card-header">
+                    <h5 class="mb-0 mt-0">
+                      <a
+                        data-toggle="collapse"
+                        href="#collapseOne"
+                        aria-expanded="true"
+                        aria-controls="collapseOne"
+                        >2. What do I do if my voucher is invalid even after making
+                        payment?</a
+                      >
+                    </h5>
+                  </div>
+                  <div
+                    id="collapseOne"
+                    role="tabpanel"
+                    aria-labelledby="headingOne"
+                    data-parent="#accordion"
+                    class="collapse show"
+                  >
+                    <div class="card-body">
+                      <p>
+                        This is highly unlikely to occur. However, we advice you
+                        to please give us a call on our customer care line in such
+                        situation.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card card-primary">
+                  <div id="headingOne" role="tab" class="card-header">
+                    <h5 class="mb-0 mt-0">
+                      <a
+                        data-toggle="collapse"
+                        href="#collapseOne"
+                        aria-expanded="true"
+                        aria-controls="collapseOne"
+                        >3. What do I do if someone gains access to my account?</a
+                      >
+                    </h5>
+                  </div>
+                  <div
+                    id="collapseOne"
+                    role="tabpanel"
+                    aria-labelledby="headingOne"
+                    data-parent="#accordion"
+                    class="collapse show"
+                  >
+                    <div class="card-body">
+                      <p>
+                        Our system is highly secured. Hence, we highly recommend that 
+                        you use a strongly typed password when registering and don't
+                        share your password with anyone. However, if someone managed
+                        to gain access to your account, please kindly send us a mail
+                        or call us as soon as possible.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="text-muted">
+                In case you haven't found the answer to your question please
+                feel free to <a href="#">contact us</a>, our customer
+                support will be happy to help you.
+              </p>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer container-fluid">
+      <small class="year">&copy; 2019, MTN Nigeria by Dickson Prince</small>
+    </footer>
+    <!-- <table>
+        </table> -->
+  </body>
+  <script src="js/source.js"></script>
+</html>

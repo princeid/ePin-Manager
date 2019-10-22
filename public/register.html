@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="js/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Registration Form</title>
+</head>
+    <body class="container reg-form">
+            <!-- Default form register -->
+<form id="reg-form" class="text-center border border-light p-5" action="#">
+
+        <p id="success" class="h6 success mb-4"></p>
+        <p class="h4 mb-4">Registration Form</p>
+            
+                <div class="form-row mb-4">
+                    <div class="col">
+                        <!-- First name -->
+                        <input type="text" maxlength="32" pattern="[A-Za-z]{2,32}" id="RegisterFormFirstName" class="form-control" placeholder="First name" required>
+                    </div>
+                    <div class="col">
+                        <!-- Last name -->
+                        <input type="text" maxlength="32" pattern="[A-Za-z]{2,32}" id="RegisterFormLastName" class="form-control" placeholder="Last name" required>
+                    </div>
+                </div>
+            
+                <!-- E-mail -->
+                <input type="email" id="RegisterFormEmail" class="form-control" placeholder="E-mail" required>
+                <span id="RegFormEmail" class="formemail form-text mb-4" style='visibility: hidden'>
+                    Email already exists
+                </span>
+                <!-- <small id='RegisterFormEmailError' class="form-text text-muted mb-4" style='display: none'>Email taken</small> -->
+                
+                <!-- Password -->
+                <input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" id="RegisterFormPassword" class="form-control" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock" required>
+                <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+                    At least 8 characters, 1 uppercase, 1 lowercase and 1 digit
+                </small>
+            
+                <!-- Phone number -->
+                <input type="tel" pattern="[0-9]{3}[0-9]{4}[0-9]{4}" id="RegisterFormPhone" name="phone" class="form-control" placeholder="Phone number" aria-describedby="defaultRegisterFormPhoneHelpBlock" required>
+                <small id="defaultRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">
+                    Optional - for two step authentication
+                </small>
+            
+                <!-- Sign up button -->
+                <button class="btn btn-info my-4 btn-block go" type="submit">Register</button>
+            
+                <hr>
+            
+                <!-- Terms of service -->
+                <p>Have an account already?
+                    <a href="login.html">click here to sign in</a>
+            
+    </form>
+            <!-- Default form register -->
+    </body>
+    <script src="js/source.js"></script>
+</html>

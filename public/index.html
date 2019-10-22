@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      function authenticate() {
+        if (window.localStorage.getItem("email") == "") {
+          window.location.replace("http://localhost:3005/login.html");
+        }
+      }
+      authenticate();
+    </script>
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+    <script src="js/jquery-3.4.1.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>My MTN</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-light bg-light nav-background">
+      <a class="navbar-brand" href="#">
+        <img src="img/logo.jpg" width="60" height="30" alt="" />
+      </a>
+
+      <div class="form-inline myform-inline1 ml-auto">
+        <input
+          id="search-field"
+          class="form-control mr-sm-2 search"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <button
+          id="search"
+          class="btn btn-outline-success my-2 my-sm-0 search-btn"
+          type="submit"
+        >
+          Search
+        </button>
+      </div>
+      <ul class="navbar-nav mt-2 mt-lg-0 ml-auto">
+        <li class="nav-item">
+          <a class="nav-link links" href="faq.html">Faqs</a>
+        </li>
+      </ul>
+      <button
+      type="submit"
+      id="signout"
+      class="btn btn-outline-secondary btn-sm sign-out-btn login-out-btn"
+    >
+      Logout
+    </button>
+    </nav>
+    <marquee behavior="scroll" direction="left">Upgrade to 4G and enjoy double data...It's simple and fast, just <a href="https://www.mtnonline.com/personal/4g/" target="_blank">click here</a></marquee>
+
+    <br />
+
+    <form id="form" class="form-inline myform-inline2">
+      <div class="form-group mb-2">
+        <select id="amount" class="form-control">
+          <option value="1500">1500</option>
+          <option value="1000">1000</option>
+          <option value="500">500</option>
+          <option value="200">200</option>
+          <option value="100">100</option>
+        </select>
+      </div>
+      <div class="form-group mx-sm-3 mb-2">
+        <input
+          type="email"
+          class="form-control form-email"
+          name="email"
+          id="email"
+          placeholder="email"
+          disabled
+        />
+      </div>
+
+      <div class="btn mb-2">
+        <button id="sub-btn" class="form-control creat" type="submit">Create</button>
+      </div>
+      <div class="btn mb-2">
+        <input
+          id="update"
+          type="button"
+          class="form-control updte"
+          class="button-submit"
+          value="Update"
+        >
+      </input>
+      </div>
+    </form>
+
+    <br />
+    <div class="panel panel-default container">
+      <!-- Table -->
+      <table class="table table-hover table-bordered">
+          <caption>ePin Manager</caption>
+        <thead class="black text-black">
+          <th>S/N</th>
+          <th>Voucher Number</th>
+          <th>Denomination</th>
+          <th>Email</th>
+          <th>Validity</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+    <footer class="footer container-fluid">
+      <small class="year">&copy; 2019, MTN Nigeria by Dickson Prince</small>
+    </footer>
+    <!-- <table>
+        </table> -->
+  </body>
+  <script src="js/source.js"></script>
+</html>

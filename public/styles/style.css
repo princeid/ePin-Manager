@@ -1,0 +1,119 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+}
+.nav-background {
+    background-color: #FFCA08 !important;
+    margin-bottom: 20px;
+}
+/* .form {
+max-width: 300px !important;
+} */
+.footer {
+    position:relative;
+    bottom:0px;
+    width: 100%;
+    margin: 0;
+    color: rgb(207, 205, 194);
+    background-color: #000;
+    height: 90px;/* or however high you would like */
+}
+.year {
+    position: absolute;
+    bottom: 40px;
+}
+.search {
+    width: 300px !important;
+}
+
+.search-btn{
+    color: white;
+    border-color: #fff;
+}
+.search-btn:hover {
+    color: white;
+    background-color: rgb(98, 125, 160);
+    border-color: rgb(98, 125, 160);
+}
+.success{
+    color: green !important;
+}
+.formemail{
+    color: red;
+}
+.nav-link{
+    position: relative;
+    right: 50px;
+}
+.go {
+    background-color: #FFCA08 !important;
+    border: #FFCA08;
+}
+.login-out-btn {
+    position: relative;
+    float: right;
+    padding: 10px, 0, 10px, 0 !important;
+    border-color: transparent;
+}
+.login-out-btn:hover {
+    color: rgb(52, 105, 175);
+    background-color:transparent ;
+    border-color: transparent;
+}
+.myform-inline1{
+    position: relative;
+    left: 280px;
+}
+.myform-inline2{
+    position: relative;
+    left: 410px;
+}
+.form-email{
+    width:250px !important;
+}
+thead{
+    background-color:#FFCA08;
+}
+marquee{
+    position: relative;
+    top: -15px;
+}
+.links{
+    color: rgb(10, 132, 180) !important;
+}
+.links:hover{
+    color: rgb(31, 172, 228) !important;
+}
+/* caption{
+    caption-side: top !important;
+} */
+
+/* Buttons */
+.btn-success {
+    background-color: transparent;
+    color: green;
+}
+.btn-primary{
+    background-color: transparent;
+    color: rgb(49, 128, 180);
+}
+.btn-danger{
+    background-color: transparent;
+    color: rgb(189, 27, 27);
+}
+.creat:hover{
+    color: white;
+    background-color: #FFCA08;
+    border-color: #FFCA08;
+}
+.updte:hover{
+    color: white;
+    background-color: #FFCA08;
+    border-color: #FFCA08;
+}
+.card-header{
+    background-color: #FFCA08;
+}
+.card-header a{
+    color: rgb(56, 54, 54);
+}
