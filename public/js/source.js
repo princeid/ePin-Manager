@@ -68,10 +68,12 @@ $.ajax({
 
   $("#form").submit(event => {
     event.preventDefault();
+    let inOneYear = new Date();
+    inOneYear.setFullYear(inOneYear.getFullYear() + 1 )
     let number = Math.floor(1000000000000000 + Math.random() * 9000000000000000)
     let amount = $("#amount").val();
     let email = localStorage.getItem("email")
-    let validity = "31-Dec-2020";
+    let validity = inOneYear
     let status = "invalid";
     $.ajax({
       url: `http://localhost:3005/carddetails`,
@@ -172,9 +174,13 @@ $.ajax({
       }
       if (window.localStorage.getItem("email") != "") {
         window.location.replace("http://localhost:3005/index.html");
-      } else {
-        window.location.replace("http://localhost:3005/login.html");
+      } 
+      else{
+        $("#invalid-login").css('visibility', 'visible');
       }
+      // else {
+      //   window.location.replace("http://localhost:3005/login.html");
+      // }
     });
   });
 
