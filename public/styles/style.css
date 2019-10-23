@@ -46,8 +46,12 @@ max-width: 300px !important;
     right: 50px;
 }
 .go {
-    background-color: #FFCA08 !important;
-    border: #FFCA08;
+    background-color: rgb(243, 192, 9) !important;
+    border: rgb(243, 192, 9);
+}
+.go:hover{
+    background-color: rgb(253, 199, 5) !important;
+    border: rgb(253, 199, 5);
 }
 .login-out-btn {
     position: relative;
