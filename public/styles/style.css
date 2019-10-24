@@ -121,3 +121,7 @@ marquee{
 .card-header a{
     color: rgb(56, 54, 54);
 }
+#alert{
+    position: relative;
+    left: 600px;
+}

@@ -318,7 +318,8 @@ function payButtonsEventListeners() {
     }).done(event => {
       for (let i = 0; i < event.length; i++) {
         if(event[i].id == p && event[i].status == "valid"){
-          alert("Already paid for this voucher")
+          $(window).scrollTop(0)
+          $('#alert').html("Already paid for this voucher")
           return
         }
       }
@@ -339,7 +340,9 @@ function payButtonsEventListeners() {
           ]
         },
         callback: function(response) {
-          alert("success. transaction ref is " + response.reference);
+          $(window).scrollTop(0)
+          $('#alert').html("success. transaction ref is " + response.reference)
+          //alert("success. transaction ref is " + response.reference);
           status = "valid";
           $.ajax({
             url: `http://localhost:3005/carddetails/${data.id}`,
@@ -349,7 +352,7 @@ function payButtonsEventListeners() {
             }
           }).done(event => {
             //$(this).css('color', 'green');
-            location.reload(true);
+            //location.reload(true);
           });
         }
       });
